@@ -1,0 +1,93 @@
+/* Animated Gradient Background */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 800% 800%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card */
+.card {
+  width: 360px;
+  min-height: 480px;
+  padding: 25px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2); /* glass effect */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+/* Card Heading with gradient text */
+.card-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+/* File Input Styling */
+.file-input {
+  border: 2px dashed #6c63ff;
+  padding: 14px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.file-input:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #4e44d8;
+}
+
+/* Button Styling */
+button.btn-success {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button.btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Status Message */
+#message {
+  font-size: 0.95rem;
+  margin-top: 12px;
+  text-align: center;
+  color: #fff;
+}
